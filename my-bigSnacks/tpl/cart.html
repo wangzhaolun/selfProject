@@ -1,0 +1,41 @@
+<ion-header-bar align-title="left">
+  <h1 class="title">零食仔</h1>
+  <button class="button button-assertive button-outline" ng-click="toggleEdit()">{{editText}}</button>
+</ion-header-bar>
+
+<ion-content class="has-footer has-header">
+  <div class="list-inset list">
+    <div class="item">
+      <h2 class="text-center">我的购物车</h2>
+    </div>
+    <div class="item" ng-repeat="cart in cartList track by $index">
+      <div class="row row-center">
+        <div class="col col-40">
+          <img ng-src="img/{{cart.img_sm}}" class="img-responsive"/>
+        </div>
+        <div class="col" ng-hide="editEnable">
+          <p>{{cart.name}}</p>
+          <p>单价：￥{{cart.price}}</p>
+          <p>数量：{{cart.dishCount}}</p>
+        </div>
+        <div class="col" ng-show="editEnable">
+          <p>单价：￥{{cart.price}}</p>
+          <p class="line-height-30">
+            <span>数量：</span>
+            <button class="button button-small" ng-click="minus($index)">-</button>
+            <span>{{cart.dishCount}}</span>
+            <button class="button button-small" ng-click="add($index)">+</button>
+          </p>
+          <p>小计：￥{{cart.dishCount*cart.price | number:2}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="item text-right">
+      <p>合计：￥{{total | number:2}}</p>
+      <button class="button button-balanced button-small"
+        ng-click="jumpToOrder()">我要下单</button>
+    </div>
+  </div>
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'"></div>

@@ -1,0 +1,23 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+<ion-content class="has-footer has-header">
+  <div class="list card">
+    <div class="item item-divider">
+      <a href="#/bigStart">首页</a> /
+      <span>详情页</span>
+    </div>
+    <div class="item item-text-wrap">
+      <h1>{{dish.name}}</h1>
+      <hr/>
+      <img ng-src="img/{{dish.img_lg}}" alt="" class="full-image"/>
+      <h2>{{dish.material}}</h2>
+      <p>{{dish.detail}}</p>
+    </div>
+    <div class="item item-divider text-right">
+      <button class="button button-balanced button-small" ng-click="addToCart()">添加到购物车</button>
+      <button class="button button-energized button-small" ng-click="jump('bigMain')">我再看看</button>
+    </div>
+  </div>
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'"></div>
