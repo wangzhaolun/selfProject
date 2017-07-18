@@ -1,0 +1,426 @@
+.open{
+    height: 100% !important;
+    background: rgba(217,40,130,0.9);
+}
+header.open>ul{
+    visibility: visible;
+    transform: scaleY(1);
+}
+.bgc{
+    background-color: rgba(217,40,130,0.9);
+}
+.white{
+    background-image: url(../images/logo-white.png) !important;
+}
+.blank{
+    background:#fff !important;
+}
+.blank:before,.blank:after{
+    background:#fff !important;
+}
+.shapeChange:before{
+    transform: rotate(-45deg);
+    top: 0 !important;
+    background:#fff !important;
+}
+.shapeChange:after{
+    transform: rotate(45deg);
+    bottom: 0 !important;
+    background:#fff !important;
+}
+.active{
+    border: 2px solid #888 !important;
+}
+.active::after{
+    background-color: transparent !important;
+}
+.show{
+    height: 0 !important;
+}
+.pop{
+    height: 100% !important;
+}
+.die{
+    display: none;
+}
+.live{
+    display: block;
+}
+.title{
+    width: 300px;
+    height: 300px;
+    float: left;
+    overflow: hidden;
+}
+.title>a{
+    display: inline-block;
+}
+.work img{
+    transition: all 0.3s;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+/******************************/
+*{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+html,body{
+    height: 100%;
+}
+body{
+    font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+}
+/*头部内容--图标 - 按钮*/
+#header{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1000;
+}
+#nav{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 1500;
+}
+#logo,#toggle_btn{
+    display: block;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    z-index: 2000;
+}
+#logo{
+    left: 0;
+    background-image: url(../images/logo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#toggle_btn{
+    right: 0;
+    cursor: pointer;
+}
+#toggle_btn:hover>div.patty:before{
+    top: -10px;
+}
+#toggle_btn:hover>div.patty:after{
+    bottom: -10px;
+}
+#toggle_btn div.patty,#toggle_btn div.patty::before,#toggle_btn div.patty::after{
+    width: 30px;
+    height: 4px;
+    background: #EC008C;
+    transition: all 0.3s;
+}
+#toggle_btn div.patty{
+    position: absolute;
+    top: 50px;
+    right: 28%;
+}
+#toggle_btn div.patty::before,#toggle_btn div.patty::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+}
+#toggle_btn div.patty:before{
+    top: -8px;
+}
+#toggle_btn div.patty::after{
+    bottom: -8px;
+}
+ul.shop-detail{
+    padding: 100px 0;
+    height: 100%;
+    box-sizing: border-box;
+    opacity: 1;
+    vertical-align: middle;
+    visibility: hidden;
+    transform-origin: center bottom;
+    transform: scaleY(0);
+    transition: all 0.3s;
+}
+ul.shop-detail>li{
+    height: 16.66%;
+    /*padding: 2% 0;*/
+}
+ul.shop-detail>li>a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+}
+ul.shop-detail>li:hover>a{
+    background: #fff;
+    color: #EC008C;
+    transition: all 0.3s;
+}
+/*主体部分-- 3次轮放*/
+#big-main{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: all 0.8s;
+}
+#project{
+    width: 100%;
+    height: 100%;
+}
+#project h1{
+    color: #000;
+    font-size: 5em;
+}
+#project-2 h1{
+    color: #FFF;
+}
+#project p{
+    color: #666;
+    font-size: 1.9em;
+    font-family: sans-serif;
+}
+#project span{
+    color: #ec008c;
+    font-size: 30px;
+    line-height: 26px;
+    vertical-align: middle;
+}
+#project>div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#project-1,#project-2,#project-3{
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    overflow: hidden;
+    transition: height 1s;
+    background-attachment: fixed;
+}
+#project-1{
+    background-image: url(../images/Today%20Show%20H.jpg);
+    z-index: 9;
+    background-color: #fff;
+}
+#project-2{
+    background-image: url(../images/mixtape-H2.gif);
+    z-index: 8;
+    background-color: #000;
+}
+#project-3{
+    background-image: url(../images/Notifica%20H.gif);
+    z-index: 7;
+    background-color: #FCF3EF;
+}
+#project div.project-text{
+    width: 300px;
+    position: absolute;
+    left: 70%;
+    bottom: 16%;
+}
+/**********************************/
+@media screen and (max-width:1297px) and (min-width: 761px){
+    #project div.project-text{
+        width: 100% !important;
+        left: 0;
+        text-align: center;
+        bottom: 7%;
+    }
+    #project-1,#project-2,#project-3{
+        background-size: auto 78%;
+        background-position: center 28%;
+    }
+}
+@media screen and (max-width:760px){
+    #project div.project-text{
+        width: 100% !important;
+        left: 0;
+        text-align: center;
+        bottom: 10%;
+    }
+    #project-1,#project-2,#project-3{
+        background-size: auto 60%;
+        background-position: center 42%;
+    }
+}
+/**********************************/
+#scroll{
+    position: absolute;
+    right: 3%;
+    top: 40%;
+    z-index: 1000;
+}
+#scroll>li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: transparent;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#scroll>li::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #BBB;
+    display: block;
+    transition: all 0.3s;
+}
+#scroll>li.link-main::after{
+    background-color: #EC008C;
+}
+
+/**********************/
+/*主体部分*/
+#main-header{
+    width: 100%;
+    height: 540px;
+    background-color: #EC008C;
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    display: table;
+}
+#main-header>p{
+    display: table-cell;
+    vertical-align: middle;
+}
+#main-header>p>span{
+    font-style: italic;
+}
+#main-project>ul{
+    width: 1200px;
+    margin: -100px auto 0;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+/***************************/
+@media screen and (max-width: 760px){
+    #main-header>p>span{
+        display: block;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+    #main-project>ul{
+        width: 900px;
+    }
+}
+@media screen and (max-width: 1024px){
+    #main-project>ul{
+        width: 600px;
+    }
+}
+/****************************/
+#main-bottom>div.main-bottom-container{
+    text-align: center;
+    width: 952px;
+    margin: 80px auto 0;
+    border-top: 1px solid #aaa;
+}
+#main-bottom>div.main-bottom-container>ul.small-box{
+    margin-top: 50px;
+}
+ul.small-box>li{
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 48px;
+    font-weight: 800;
+}
+ul.small-box>li:hover{
+    color: #fff;
+    background-color: #ec008c;
+}
+ul.small-box>li>span{
+    display: block;
+}
+/*******************************/
+@media screen and (max-width: 760px){
+    #main-bottom>div.main-bottom-container{
+        width: 600px;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+    #main-bottom>div.main-bottom-container{
+        width: 952px;
+    }
+}
+@media screen and (min-width: 760px) and (max-width: 1024px){
+    #main-bottom>div.main-bottom-container{
+        width: 760px;
+    }
+}
+/*******************************/
+footer{
+    margin-top: 40px;
+    background-color: #000;
+}
+#footer-container{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 80px 0 50px;
+    text-align: center;
+    color: #999;
+}
+#footer-logo{
+    display: inline-block;
+    width: 46px;
+    height: 54px;
+    background: url("../images/sl.png") center center no-repeat;
+}
+#footer-logo:hover{
+    background-color: #EC008C;
+}
+#footer-container>p{
+    padding: 20px 0;
+}
+#footer-meta{
+    border-top: 1px solid #aaa;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+#footer-meta:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#footer-meta>span{
+    float: left;
+}
+#footer-meta>ul,#footer-meta>ul>li{
+    float: right;
+}
+#footer-meta>ul>li{
+    margin-left: 10px;
+}
+/*************************************/
+@media screen and (max-width: 760px){
+    #footer-container{
+        width: 600px;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+    #footer-container{
+        width: 980px;
+    }
+}
+@media screen and (min-width: 760px) and (max-width: 1024px){
+    #footer-container{
+        width: 760px;
+    }
+}
