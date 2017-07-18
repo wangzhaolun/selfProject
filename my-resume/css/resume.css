@@ -1,0 +1,48 @@
+.nopmb{
+    margin:0;
+    padding:0;
+    border: none;
+}
+.wx::before{
+    font-size: 0.6em;
+}
+#nav{
+    background-color:#fff;
+    box-shadow:0 0.125em 0.25em 0 rgba(0,0,0,.11);
+}
+@media screen and (min-width:992px){
+    .mainTxt{
+        font-size:1.4em;
+    }
+}
+.mainTxt{
+    margin-top:50px;
+    padding-top:50px;
+    line-height:1.7;
+}
+.portrait{
+    width:200px;
+    height:200px;
+    margin:0 auto;
+    border-radius:50%;
+}
+.social-icon li{
+    display:inline-block;
+    margin-right:4px;
+}
+.social-icon a{
+    font-size: 2em;
+    text-decoration: none;
+}
+.ul-edu{
+    list-style:none;
+}
+.ul-edu li{
+    position:relative;
+}
+.i-edu::before{
+    font-size: 1.4em;
+    position:absolute;
+    left:-1.4em;
+    top:-0.2em;
+}
