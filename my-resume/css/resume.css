@@ -46,3 +46,113 @@
     left:-1.4em;
     top:-0.2em;
 }
+/*bgm*/
+ #audio-ctr{
+     width: 220px;
+     height: 40px;
+     background-color: #aaa;
+     position: fixed;
+     transform-origin: left top;
+ }
+ @media screen and (max-width: 760px){
+     #audio-ctr{
+         display: none;
+     }
+ }
+.audio-Horizontal{
+    top: 270px;
+    left: -220px;
+    transition: left 1s linear;
+}
+ .audio-LengthWays{
+     top: 350px;
+     left: -40px;
+     transform: rotate(-90deg);
+     transition: left 0.3s linear;
+ }
+#audio-ctr:hover{
+    left: 0;
+}
+#audio-ctr:hover .audio-ctr-btn{
+    background-color: #fff;
+}
+.audio-rotate-dot{
+    width: 6px;
+    height: 6px;
+    background-color: #000;
+    position: absolute;
+    top: 17px;
+    left: 2px;
+    cursor: pointer;
+}
+.ctr-box{
+    width: 200px;
+    height: 20px;
+    margin: auto;
+    position: relative;
+    top: 10px;
+}
+.ctr-box>div{
+    position: absolute;
+}
+.audio-play,.audio-pause{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url("../static/audio/pause.png");
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.audio-pause{
+    background-image: url("../static/audio/play.png");
+}
+.audio-volume{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url("../static/audio/volume.png");
+    background-size: 100% 100%;
+    left: 30px;
+}
+.audio-set-volume{
+    width: 140px;
+    height: 6px;
+    border-radius: 4px;
+    background-color: #fff;
+    top: 7px;
+    right: 0;
+}
+.audio-back{
+    height: 100%;
+    width: 50%;
+    border-radius: 4px;
+    background-color: #c70c0c;
+    position: absolute;
+}
+.audio-back-btn{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    right: -7px;
+    top: -4px;
+    cursor: pointer;
+}
+.audio-ctr-btn{
+    background-color: #000;
+    position: absolute;
+    cursor: pointer;
+}
+.audio-Horizontal .audio-ctr-btn{
+    width: 10px;
+    height: 40px;
+    top: 0;
+    right: -10px;
+}
+.audio-LengthWays .audio-ctr-btn{
+    width: 40px;
+    height: 10px;
+    top: 40px;
+    right: 100px;
+}
